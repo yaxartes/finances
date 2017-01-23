@@ -1,0 +1,1 @@
+<%= line_chart @currency_rates.group(:currency_from).group_by_hour(:created_at).count %>
