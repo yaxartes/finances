@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 20170123101739) do
   enable_extension "plpgsql"
 
   create_table "currency_rates", force: :cascade do |t|
-    t.integer  "currency_from"
-    t.integer  "currency_to"
+    t.string   "currency_from"
+    t.string   "currency_to"
     t.float    "rate_buy"
     t.float    "rate_sell"
     t.datetime "created_at",    null: false

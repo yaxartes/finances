@@ -1,1 +1,4 @@
-<%= line_chart @currency_rates.group(:currency_from).group_by_hour(:created_at).count %>
+Курс покупки
+<%= line_chart @buy.map { |key, value| {name: key, data: value} } %>
+Курс продажи
+<%= line_chart @sell.map { |key, value| {name: key, data: value} } %>
