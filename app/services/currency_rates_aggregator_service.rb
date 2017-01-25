@@ -10,6 +10,8 @@ class CurrencyRatesAggregatorService
     end
   end
 
+  private
+
   def parse_rates
     uri = URI('https://www.tinkoff.ru/api/v1/currency_rates/')
     response = Net::HTTP.get(uri)

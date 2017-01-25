@@ -1,6 +1,4 @@
 class CurrencyRatesController < ApplicationController
-  before_filter :set_period, only: :index
-
   def index
     @currency_rates = CurrencyRate.period(params[:period])
     [@buy = {},@sell = {}].each do |operation|

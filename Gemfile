@@ -46,4 +46,10 @@ gem 'whenever', require: false
 
 gem 'chartkick'
 
-gem 'groupdate'
+group :development, :test do
+  gem 'rspec-rails', '~> 3.5'
+  gem 'factory_girl_rails'
+end
+
+
+
