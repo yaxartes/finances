@@ -1,4 +1,16 @@
+<%= form_tag(root_path, method: "get") do %>
+  <%= radio_button_tag(:period, "6 hours") %>
+  <%= label_tag(:period_6_hours, "6 часов") %>
+  <%= radio_button_tag(:period, "day") %>
+  <%= label_tag(:period_day, "Сутки") %>
+  <%= radio_button_tag(:period, "week") %>
+  <%= label_tag(:period_week, "Неделя") %>
+  <%= submit_tag "Выбрать" %>
+<% end %>
+<br>
+
 Курс покупки
 <%= line_chart @buy.map { |key, value| {name: key, data: value} } %>
 Курс продажи
 <%= line_chart @sell.map { |key, value| {name: key, data: value} } %>
+
